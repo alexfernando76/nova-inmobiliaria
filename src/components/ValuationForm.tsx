@@ -26,7 +26,10 @@ export default function ValuationForm() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-8" name="valuation-form" id="valuation-form">
                 <div className="flex flex-col gap-4">
                   <p className="text-[13px] font-semibold uppercase tracking-wide text-gray-500">Datos de contacto</p>
-                  <input required name="name" placeholder="Nombre completo" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <input required name="first_name" placeholder="Nombre" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                    <input required name="last_name" placeholder="Apellido" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  </div>
                   <input required type="email" name="email" placeholder="Correo electrónico" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
                   <input required type="tel" name="phone" placeholder="Teléfono" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
                   <input required name="address" placeholder="Dirección" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
