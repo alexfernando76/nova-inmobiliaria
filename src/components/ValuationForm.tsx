@@ -23,26 +23,26 @@ export default function ValuationForm() {
                 <p className="mt-2 text-gray-600 text-[15px]">Nuestro equipo preparará una valuación estimada y te la enviaremos por correo.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-8" name="valuation-form" id="valuation-form">
                 <div className="flex flex-col gap-4">
                   <p className="text-[13px] font-semibold uppercase tracking-wide text-gray-500">Datos de contacto</p>
-                  <input required placeholder="Nombre completo" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                  <input required type="email" placeholder="Correo electrónico" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                  <input required type="tel" placeholder="Teléfono" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                  <input required placeholder="Dirección" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <input required name="name" placeholder="Nombre completo" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <input required type="email" name="email" placeholder="Correo electrónico" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <input required type="tel" name="phone" placeholder="Teléfono" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <input required name="address" placeholder="Dirección" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
                 </div>
 
                 <div className="flex flex-col gap-4">
                   <p className="text-[13px] font-semibold uppercase tracking-wide text-gray-500">Datos de la propiedad</p>
-                  <select required defaultValue="" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] text-gray-700 outline-none focus:ring-2 focus:ring-brand-400">
+                  <select required name="property_type" defaultValue="" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] text-gray-700 outline-none focus:ring-2 focus:ring-brand-400">
                     <option value="" disabled>Tipo de propiedad</option>
                     <option>Casa</option>
                     <option>Departamento</option>
                     <option>Terreno</option>
                     <option>Local comercial</option>
                   </select>
-                  <input required placeholder="Área aproximada (m²)" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                  <input required placeholder="Dirección o sector de la propiedad" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <input required name="property_area" placeholder="Área aproximada (m²)" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                  <input required name="property_address" placeholder="Dirección o sector de la propiedad" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
                 </div>
 
                 <button

@@ -31,18 +31,18 @@ export default function ContactForm() {
               <p className="mt-2 text-gray-600 text-[15px]">Recibimos tu mensaje. Un asesor se pondrá en contacto pronto.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-8" name="contact-form" id="contact-form">
               <div className="flex flex-col gap-4">
                 <p className="text-[13px] font-semibold uppercase tracking-wide text-gray-500">Datos de contacto</p>
-                <input required placeholder="Nombre completo" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                <input required type="email" placeholder="Correo electrónico" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                <input required type="tel" placeholder="Teléfono" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
-                <input required placeholder="Dirección" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                <input required name="name" placeholder="Nombre completo" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                <input required type="email" name="email" placeholder="Correo electrónico" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                <input required type="tel" name="phone" placeholder="Teléfono" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
+                <input required name="address" placeholder="Dirección" className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400" />
               </div>
 
               <div className="flex flex-col gap-4">
                 <p className="text-[13px] font-semibold uppercase tracking-wide text-gray-500">Tu mensaje</p>
-                <textarea required placeholder="¿Qué tipo de propiedad buscas?" rows={4} className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400 resize-none" />
+                <textarea required name="message" placeholder="¿Qué tipo de propiedad buscas?" rows={4} className="rounded-[12px] border border-black/10 bg-white px-4 py-3 text-[15px] outline-none focus:ring-2 focus:ring-brand-400 resize-none" />
               </div>
 
               <button
